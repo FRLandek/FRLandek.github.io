@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,6 +55,18 @@
     cursor: not-allowed;
   }
 
+.button4 {
+    background-color:rgba(69, 175, 27, 0.733);
+    border: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: col-resize;
+}
+
 .potassium {
     color: rgb(57, 168, 100)
 }
@@ -57,17 +77,39 @@ body {
 
 
 
-
-
-
-
 </style>
 <body>
+    <style>
+    :root {
+        --pico-border-radius: 2rem;
+        --pico-typography-spacing-vertical: 1.5rem;
+        --pico-form-element-spacing-vertical: 1rem;
+        --pico-form-element-spacing-horizontal: 1.25rem;
+      }
+      h1 {
+        --pico-font-family: Pacifico, cursive;
+        --pico-font-weight: 400;
+        --pico-typography-spacing-vertical: 0.5rem;
+      }
+      button {
+        --pico-font-weight: 700;
+      }
+    </style>
+    
+    <h1>Music fest mania</h1>
+    <p>
+      Get ready to dance and sing your heart out at 
+      our Music Fest Mania. Join the crowd, jam to
+      your favorite band, and discover new artists.
+    </p>
+    <button>Let's rock out!</button>
 
-    <h1>HOME OF MY WWWEBB WORLD</h1>
+
+    <h1 class="h1">HOME OF MY WWWEBB WORLD</h1>
     <button onclick="window.location.href='wcar.html'" class="button2">Check out my W car</button>
     <button onclick="window.location.href='freerobux.html'" class = "button">Click here to claim free robox?</button>
     <button onclick="window.location.href='games.html'" class = "button3">play my games</button>
+    <button onclick="window.location.href='chetgeppetti.html'" class = "button4">chet geppetti</button>
 
     <h2 class = "potassium">potassium nitrate</h2>
     <h2>TERMS AND CONDITIONS:
