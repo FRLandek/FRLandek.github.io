@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.top-section {
+    background-color: #8132f0;
+    color: white;
+    padding: 40px;
+}
+
+
