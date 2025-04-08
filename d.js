@@ -1,0 +1,1 @@
+document.getElementById("Text").innerHTML = "ts pmo icl 💔💔💔🥀🥀🪫🪫🪫🪫🪫";
