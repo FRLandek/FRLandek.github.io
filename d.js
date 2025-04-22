@@ -1,1 +1,1 @@
-document.getElementById("Text").innerHTML = "ts pmo icl 💔💔💔🥀🥀🪫🪫🪫🪫🪫";
+document.getElementById("Text").innerHTML = "ts pmo icl 💔💔💔🥀🥀🪫🪫🪫🪫🪫"; 

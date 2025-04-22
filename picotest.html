@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Haven</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-green-500 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">Coffee Haven</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#hero" class="text-white hover:text-green-100 transition duration-300">Home</a></li>
+                <li><a href="#menu" class="text-white hover:text-green-100 transition duration-300">Menu</a></li>
+                <li><a href="#about" class="text-white hover:text-green-100 transition duration-300">About</a></li>
+                <li><a href="#contact" class="text-white hover:text-green-100 transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-gradient-to-br from-green-400 via-green-300 to-green-200 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-4">Welcome to Coffee Haven</h1>
+            <p class="text-xl mb-8">Sip into something warm and welcoming.</p>
+            <a href="#menu" class="bg-white text-green-500 px-6 py-3 rounded-full shadow-lg hover:bg-green-100 hover:text-green-600 transition duration-300">View Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12">Our Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="bg-green-100 p-8 rounded-lg shadow-md fade-in">
+                    <h3 class="text-2xl font-semibold mb-2">Espresso</h3>
+                    <p class="text-gray-600 mb-4">A rich and concentrated form of coffee.</p>
+                    <p class="text-green-500 font-bold">$2.50</p>
+                </div>
+                <div class="bg-green-100 p-8 rounded-lg shadow-md fade-in">
+                    <h3 class="text-2xl font-semibold mb-2">Latte</h3>
+                    <p class="text-gray-600 mb-4">Espresso with steamed milk and a touch of foam.</p>
+                    <p class="text-green-500 font-bold">$3.50</p>
+                </div>
+                <div class="bg-green-100 p-8 rounded-lg shadow-md fade-in">
+                    <h3 class="text-2xl font-semibold mb-2">Cappuccino</h3>
+                    <p class="text-gray-600 mb-4">Equal parts espresso, steamed milk, and foam.</p>
+                    <p class="text-green-500 font-bold">$4.00</p>
+                </div>
+                <div class="bg-green-100 p-8 rounded-lg shadow-md fade-in">
+                    <h3 class="text-2xl font-semibold mb-2">Americano</h3>
+                    <p class="text-gray-600 mb-4">Espresso diluted with hot water.</p>
+                    <p class="text-green-500 font-bold">$3.00</p>
+                </div>
+                <div class="bg-green-100 p-8 rounded-lg shadow-md fade-in">
+                    <h3 class="text-2xl font-semibold mb-2">Mocha</h3>
+                    <p class="text-gray-600 mb-4">Latte with chocolate syrup.</p>
+                    <p class="text-green-500 font-bold">$4.50</p>
+                </div>
+                <div class="bg-green-100 p-8 rounded-lg shadow-md fade-in">
+                    <h3 class="text-2xl font-semibold mb-2">Macchiato</h3>
+                    <p class="text-gray-600 mb-4">Espresso with a dollop of milk foam.</p>
+                    <p class="text-green-500 font-bold">$3.75</p>
+                </div>
+            </div>
+        </div>
+    </section>
