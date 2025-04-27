@@ -1,53 +1,167 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/pico.min.css">
-        
-        <link rel="stylesheet" href="main.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WEB WORLD</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/pico.min.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="/Images/glurgus.ico" type="image/x-icon">
 
-    </head>
-    <body>
-      <div class="top-section bg-purple-500 text-white p-8 flex justify-between">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+  
+    #bg {
+  position: fixed;
+  top: 150px; /* <<< push it down 150 pixels */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 150px); /* <<< resize it to fit the rest */
+  z-index: 0;
+  pointer-events: none;
+}
 
-        <a href="index.html">
-          <button class="bg-blue-300 hover:bg-blue-400 focus:outline-2 focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 active:bg-violet-800 rounded-lg px-20 py-4 text-3xl font-bold font-mono">
-            Home
-          </button>
-        </a>
+  
+    #funnyGif {
+      position: fixed;
+      top: 120px;
+      left: 20px;
+      width: 700px;
+      z-index: 10;
+      pointer-events: none;
+    }
+  
+    header {
+      position: relative;
+      z-index: 5;
+    }
+  
+    main {
+      position: relative;
+      z-index: 5;
+    }
 
-        <a href="games.html">
-          <button class="bg-blue-300 hover:bg-blue-400 focus:outline-2 focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 active:bg-violet-800 rounded-lg px-20 py-4 text-3xl font-bold font-mono">
-            Games
-          </button>
-        </a>
+    #pcButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 150px;
+  cursor: pointer;
+  z-index: 20;
+    }
 
-        <a href="projects.html">
-          <button class="bg-blue-300 hover:bg-blue-400 focus:outline-2 focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 active:bg-violet-800 rounded-lg px-20 py-4 text-3xl font-bold font-mono">
-            Projects
-          </button>
-        </a>
+    #popupImage {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
 
-        <a href="other.html">
-          <button class="bg-blue-300 hover:bg-blue-400 focus:outline-2 focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 active:bg-violet-800 rounded-lg px-20 py-4 text-3xl font-bold font-mono">
-            Other
-          </button>
+        #popupImage img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 0px;
+        }
 
-        </a>
+        #closeBtn {
+            position: absolute;
+            top: 107px;
+            right: 55px;
+            color: transparent;
+            cursor: pointer;
+        }
+  </style>
+</head>
 
-      </div>
+<body class="relative overflow-hidden">
 
-      <a href = "idiot.html">
-        Idiot.html
+  <!-- 🟣 NAV BAR ONLY -->
+  <header class="bg-purple-500 text-white p-8">
+    <div class="flex justify-between">
+      <a href="index.html">
+        <button class="bg-blue-300 hover:bg-blue-400 focus:outline-2 focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 active:bg-violet-800 rounded-lg px-20 py-4 text-3xl font-bold font-mono">
+          Home
+        </button>
       </a>
-      <br>
-      <a href = "picotest.html">
-        pico test
+
+      <a href="games.html">
+        <button class="bg-blue-300 hover:bg-blue-400 focus:outline-2 focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 active:bg-violet-800 rounded-lg px-20 py-4 text-3xl font-bold font-mono">
+          Games
+        </button>
       </a>
 
+      <a href="projects.html">
+        <button class="bg-blue-300 hover:bg-blue-400 focus:outline-2 focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 active:bg-violet-800 rounded-lg px-20 py-4 text-3xl font-bold font-mono">
+          Projects
+        </button>
+      </a>
 
+      <a href="other.html">
+        <button class="bg-blue-300 hover:bg-blue-400 focus:outline-2 focus:outline-blue-600 focus:ring-2 focus:ring-blue-600 active:bg-violet-800 rounded-lg px-20 py-4 text-3xl font-bold font-mono">
+          Other
+        </button>
+      </a>
+    </div>
+  </header>
 
+  <!-- 🟢 NORMAL STUFF AFTER NAV -->
+  <main class="relative z-10">
+    <p id="gameName" class="text-black text-center text-xl mt-4 font-mono">Loading...</p>
+    <p id="creatorName" class="text-black text-center text-xl mt-4 font-mono">Loading...</p>
+  </main>
 
+  <!-- 🔵 YOUR GAME BACKGROUND -->
+  <canvas id="bg"></canvas>
 
-    </body>
+  <!-- 🟡 FLOATING GIF -->
+  <img id="funnyGif" src="Images/text.gif">
+
+  <!-- Scripts -->
+  <script type="module" src="index.js"></script>
+
+  <img id="pcButton" src="Images/thepc.png" alt="Button" />
+
+  <div id="popupImage">
+    <span id="closeBtn">&times;</span>
+    <img src="Images/error.png" alt="Popup Image" />
+  </div>
+
+  <audio id="popupSound" src="Sounds/error.mp3" preload="auto"></audio>
+
+  <script>
+        const button = document.getElementById('pcButton');
+        const popup = document.getElementById('popupImage');
+        const closeBtn = document.getElementById('closeBtn');
+        const sound = document.getElementById('popupSound');
+
+        // Show the image popup
+        button.onclick = () => {
+            popup.style.display = 'block';
+            sound.play();
+        };
+
+        // Close the image popup
+        closeBtn.onclick = () => {
+            popup.style.display = 'none';
+        };
+
+        // Optional: Close the popup if clicked outside
+        window.onclick = (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        };
+  </script>
+
+</body>
 </html>
