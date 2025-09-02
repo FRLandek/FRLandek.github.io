@@ -57,7 +57,14 @@ const meshConfigs = [
       position: { x: 6, y: 1, z: 13 },
       speed: .005,
       game: "Geometry Dash (Robtop)",
-      creator: "Khalfanel (Sketchfab)"
+      creator: "Khalfanel (Sketchfab)",
+    },
+    {
+      path: '/models/chimpanzini_bananini.glb',
+      position: { x: 2, y: 0, z: 17 },
+      speed: .1,
+      game: "None",
+      creator: "Aizenx. (Sketchfab)"
     }
   ];
   
