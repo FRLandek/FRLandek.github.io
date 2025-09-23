@@ -11,15 +11,15 @@ function getRandomInt(min, max) {
 }
   
   // Example: Generate a random integer between 1 and 10 (inclusive)
-var y = getRandomInt(30, 700);
+var y = getRandomInt(100, -400);
 var x = 700
-const pipeGap = 150
+const pipeGap = 600
 
 const intervalId = setInterval(() => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "green"
     // Draw a filled rectangle at (50, 50) with a width of 100 and height of 75
-    ctx.fillRect(x, y, 75, 500);
-    ctx.fillRect(x, y + pipeGap, 75, 500);
+    ctx.fillRect(x, y, 75, 400);
+    ctx.fillRect(x, y + pipeGap, 75, 400);
     x -= 1
 }, 10);
