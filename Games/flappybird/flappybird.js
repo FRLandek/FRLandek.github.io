@@ -37,4 +37,18 @@ const intervalId = setInterval(() => {
     ctx.fillRect(x3, y3, 75, 500);
     ctx.fillRect(x3, y3 + pipeGap, 75, 500);
     x3 -= 1
+
+    if (x1 < -100) {
+      x1 = 700
+      y1 = getRandomInt(-500, 0);
+    }
+    if (x2 < -100) {
+      x2 = 1000
+      y2 = getRandomInt(-500, 0);
+    }
+    if (x3 < -100) {
+      x2 = 1300
+      y3 = getRandomInt(-500, 0);
+    }
+
 }, 10);
