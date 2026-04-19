@@ -1,0 +1,26 @@
+#bannerDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    margin: 0px auto;
+}
+
+.gameButton {
+    width: 500px;
+}
+
+#banner {
+    width: 500px;
+}
+
+#three-frame {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 200px;
+    border: 2px solid #444;
+}

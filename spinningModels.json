@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/models/peachs_castle.glb",
+    "position": { "x": 15, "y": -2, "z": 0 },
+    "speed": 0.005,
+    "game": "Super Mario 64 (Nintendo)",
+    "creator": "Nintendo"
+  },
+  {
+    "path": "/models/skull.glb",
+    "position": { "x": 5, "y": 1, "z": 15 },
+    "speed": 0.05,
+    "game": "None",
+    "creator": "soidev (Sketchfab)"
+  },
+  {
+    "path": "/models/companion_cube.glb",
+    "position": { "x": 5, "y": 0.5, "z": 15 },
+    "speed": 0.005,
+    "game": "Portal (Valve)",
+    "creator": "Michael Klement (Sketchfab)"
+  },
+  {
+    "path": "/models/wheatley.glb",
+    "position": { "x": 40, "y": 8, "z": -30 },
+    "speed": 0.005,
+    "game": "Portal 2 (Valve)",
+    "creator": "Valve"
+  },
+  {
+    "path": "/models/bloxy_cola.glb",
+    "position": { "x": 7, "y": 1, "z": 13 },
+    "speed": 0.005,
+    "game": "Roblox",
+    "creator": "Roblox"
+  },
+  {
+    "path": "/models/normal.glb",
+    "position": { "x": 6, "y": 1, "z": 13 },
+    "speed": 0.005,
+    "game": "Geometry Dash (Robtop)",
+    "creator": "Khalfanel (Sketchfab)"
+  },
+  {
+    "path": "/models/chimpanzini_bananini.glb",
+    "position": { "x": 2, "y": 0, "z": 17 },
+    "speed": 0.1,
+    "game": "None",
+    "creator": "Aizenx. (Sketchfab)"
+  }
+]
