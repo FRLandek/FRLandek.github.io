@@ -28,6 +28,15 @@
     align-items: center;
 }
 
+.pythonText {
+    color: rgb(255, 179, 16);
+    font-size: 20px;
+    font-family: "Lucida Console";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 th, td {
   padding: 15px;
 }
